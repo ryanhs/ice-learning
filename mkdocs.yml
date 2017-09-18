@@ -1,2 +1,8 @@
 site_name: ICE Learning
 theme: 'material'
+
+extra_css:
+  - 'assets/stylesheets/extra.css'
+
+markdown_extensions:
+  - codehilite
