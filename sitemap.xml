@@ -4,47 +4,55 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/lorem 1/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <loc>/preface/</loc>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/lorem 2/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <loc>/course/course/</loc>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/lorem 3/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <loc>/course/exercise/</loc>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/lorem 4/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <loc>/course/challenge/</loc>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/lorem 5/</loc>
-     <lastmod>2017-09-19</lastmod>
+     <loc>/puzzle-rank/</loc>
+     <lastmod>2017-09-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/about/</loc>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

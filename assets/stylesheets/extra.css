@@ -1,3 +1,7 @@
 .md-header {
-    background-color: #40a716;
+    background-color: #012340;
+}
+
+.md-content article p {
+    text-align: justify;
 }
