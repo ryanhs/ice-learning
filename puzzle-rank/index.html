@@ -208,10 +208,67 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Puzzle Rank
+      </label>
     
     <a href="./" title="Puzzle Rank" class="md-nav__link md-nav__link--active">
       Puzzle Rank
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-it" title="What is it" class="md-nav__link">
+    What is it
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-concept" title="Challenges Concept" class="md-nav__link">
+    Challenges Concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badges-system" title="Badges System" class="md-nav__link">
+    Badges System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-insert-challenge" title="Auto Insert Challenge" class="md-nav__link">
+    Auto Insert Challenge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-pseudo-code" title="Simple Pseudo Code" class="md-nav__link">
+    Simple Pseudo Code
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -242,6 +299,50 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-it" title="What is it" class="md-nav__link">
+    What is it
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-concept" title="Challenges Concept" class="md-nav__link">
+    Challenges Concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badges-system" title="Badges System" class="md-nav__link">
+    Badges System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-insert-challenge" title="Auto Insert Challenge" class="md-nav__link">
+    Auto Insert Challenge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-pseudo-code" title="Simple Pseudo Code" class="md-nav__link">
+    Simple Pseudo Code
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -254,9 +355,137 @@
               
                 
                 
-                  <h1>Puzzle Rank</h1>
-                
-                <p>1</p>
+                <h1 id="puzzle-rank">Puzzle Rank</h1>
+<p><img alt="Image of Puzzle Rank" src="../assets/images/puzzle-rank/main.png" /></p>
+<h2 id="what-is-it">What is it</h2>
+<p>This feature is the main feature of this platform. To gain badges as many as student can by solves as many challenge as student can.</p>
+<p>A challenge is grabbed from database / 3rd parties API, then decided if its good enough to be a challenge and categorized (level) how hard is it. All process done by system.</p>
+<h2 id="challenges-concept">Challenges Concept</h2>
+<p>Challenges categorized in 5 Level. Each level have different points. A student can take as many challenge as student can, and accumulated points to get a badges.</p>
+<p>Here table for map the level and points gain:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Level</th>
+<th align="right">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">very easy</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">easy</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="left">medium</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td align="left">hard</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td align="left">very hard</td>
+<td align="right">10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="badges-system">Badges System</h2>
+<p>Badges system in this platform is just a label of how much points gained. For example, after 32 points, student can get <strong>knight</strong> badge. Here are table for badges compare how much points should a student accumulated:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Badge</th>
+<th align="right">Minimum Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pawn</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">knight</td>
+<td align="right">32</td>
+</tr>
+<tr>
+<td align="left">rook</td>
+<td align="right">128</td>
+</tr>
+<tr>
+<td align="left">queen</td>
+<td align="right">256</td>
+</tr>
+<tr>
+<td align="left">king</td>
+<td align="right">512</td>
+</tr>
+</tbody>
+</table>
+<p><em>*student automatically got pawn badge as a start.</em></p>
+<h2 id="auto-insert-challenge">Auto Insert Challenge</h2>
+<p>A challenge is a puzzle that can be found in a database or an API from a website, in this case for this platform, platform grab from <a href="http://chessblunders.org/">http://chessblunders.org/</a>.</p>
+<p>After get a puzzle, system decide if its a good puzzle to become a challenge or not by these rules:</p>
+<ol>
+<li>If it end with checkmate is <strong>good</strong>,</li>
+<li>If it end with not better material counts then its <strong>not good</strong>. Different material sum between each side in the end of moves must be better than the first time,</li>
+<li>If it end without a hit then its <strong>not good</strong>. For make a challenge vividly make sense for student. It must be end with a "final" hitm,</li>
+<li>Finally if all above condition passed, then the puzzle is <strong>good</strong>.</li>
+</ol>
+<p>After puzzle decided is good for a challenge, then classify the puzzle to which level it falls on. Platform decide it with Classification Machine Learning. Several Algorithm used to classify the puzzle and get <strong>mean</strong> (polls) of results to decide which level is the challenge/puzzle is. Algorithms used are:</p>
+<ul>
+<li><strong>K-Nearest Neighbors</strong>, with K 3</li>
+<li><strong>Naivebayes</strong></li>
+<li><strong>SVC</strong> with linier system and cost = 1000</li>
+</ul>
+<h2 id="simple-pseudo-code">Simple Pseudo Code</h2>
+<p>Here is simple pseudo code of system from grab puzzle until classify a level for a challenge/puzzle:</p>
+<div class="codehilite"><pre><span></span><span class="k">function</span> <span class="nf">storeIntoDB</span><span class="p">(</span><span class="n">puzzle</span><span class="o">,</span> <span class="n">level</span><span class="p">)</span>
+    <span class="o">...</span> <span class="n">store</span> <span class="n">into</span> <span class="n">DB</span> <span class="o">...</span>
+
+<span class="k">function</span> <span class="nf">getPiecesValue</span><span class="p">(</span><span class="n">position</span><span class="o">,</span> <span class="n">color</span><span class="p">)</span>
+    <span class="o">/*</span>
+     <span class="o">*</span> <span class="nb">sum</span> <span class="n">all</span> <span class="n">pieces</span> <span class="n">value</span> <span class="n">fro</span> <span class="n">a</span> <span class="n">color</span> <span class="k">in</span> <span class="n">a</span> <span class="n">position</span> <span class="n">based</span> <span class="k">on</span><span class="o">,</span>
+     <span class="o">*</span> <span class="nb">exp</span><span class="o">:</span> <span class="n">https</span><span class="o">:</span><span class="c1">//en.wikipedia.org/wiki/Chess_piece_relative_value</span>
+     <span class="o">*/</span>
+    <span class="n">return</span> <span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+
+<span class="k">function</span> <span class="nf">isGoodPuzzle</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)</span>
+    <span class="o">/*</span>
+     <span class="o">*</span> <span class="n">check</span> <span class="k">if</span> <span class="n">it</span> <span class="k">is</span><span class="o">:</span>
+     <span class="o">*</span> <span class="err">1</span><span class="o">.</span> <span class="n">a</span> <span class="n">checkmate</span> <span class="k">or</span>
+     <span class="o">*</span> <span class="err">2</span><span class="o">.</span> <span class="n">last</span> <span class="n">position</span> <span class="k">is</span> <span class="n">better</span> <span class="n">material</span> <span class="n">than</span> <span class="n">first</span> <span class="n">position</span><span class="o">,</span> <span class="k">and</span>
+     <span class="o">*</span> <span class="err">3</span><span class="o">.</span> <span class="n">last</span> <span class="nb">move</span> <span class="k">is</span> <span class="n">a</span> <span class="n">hit</span>
+     <span class="o">*</span>
+     <span class="o">*</span> <span class="k">in</span> <span class="n">query</span><span class="o">:</span> <span class="n">isCheckmate</span><span class="p">()</span> <span class="k">or</span> <span class="p">(</span> <span class="n">materialDiffs</span><span class="p">()</span> <span class="k">and</span> <span class="n">isLastMoveAHit</span><span class="p">()</span> <span class="p">)</span>
+     <span class="o">*</span>
+     <span class="o">*</span> <span class="n">return</span> <span class="k">true</span> <span class="k">if</span> <span class="n">one</span> <span class="k">of</span> <span class="n">above</span> <span class="n">reasons</span> <span class="k">is</span> <span class="k">true</span> <span class="err">&quot;</span><span class="k">if</span> <span class="n">ordered</span><span class="err">&quot;</span>
+     <span class="o">*</span> <span class="n">return</span> <span class="k">false</span> <span class="k">if</span> <span class="n">any</span> <span class="k">of</span> <span class="n">above</span> <span class="n">reasons</span> <span class="k">not</span> <span class="n">found</span>
+     <span class="o">*/</span>
+
+<span class="k">function</span> <span class="nf">run</span><span class="p">()</span>
+    <span class="o">/*</span>
+     <span class="o">*</span> <span class="n">classifier</span><span class="o">,</span> <span class="n">sample</span> <span class="n">use</span> <span class="n">perft</span> <span class="n">results</span> <span class="k">and</span> <span class="n">depth</span> <span class="k">of</span> <span class="n">moves</span> <span class="nb">length</span>
+     <span class="o">*</span> <span class="n">classifier</span> <span class="n">are</span> <span class="n">KNearestNeighbors</span><span class="o">-</span><span class="mi">3</span><span class="o">,</span> <span class="n">naiveBayes</span><span class="o">,</span> <span class="n">svc</span> <span class="n">linier</span> <span class="mi">1000</span>
+     <span class="o">*/</span>
+    <span class="n">classifier</span> <span class="o">:=</span> <span class="n">getAllClassifier</span><span class="p">()</span>
+    <span class="n">classifier</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">getClassifierSamples</span><span class="p">())</span>
+
+    <span class="o">/*</span>
+     <span class="o">*</span> <span class="n">get</span> <span class="n">puzzle</span> <span class="n">from</span> <span class="n">DB</span> <span class="o">/</span> <span class="n">online</span>
+     <span class="o">*/</span>
+    <span class="n">puzzle</span> <span class="o">:=</span> <span class="n">grabRandomPuzzle</span><span class="p">()</span>
+
+    <span class="o">/*</span>
+     <span class="o">*</span> <span class="n">get</span> <span class="n">median</span> <span class="n">results</span> <span class="n">from</span> <span class="n">all</span> <span class="n">classifier</span><span class="o">,</span> <span class="n">either</span> <span class="k">is</span> <span class="n">easy</span> <span class="o">/</span> <span class="n">medium</span> <span class="o">/</span> <span class="n">hard</span>
+     <span class="o">*/</span>
+    <span class="k">if</span> <span class="n">isGoodPuzzle</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)</span>
+        <span class="n">medianResult</span> <span class="o">:=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+        <span class="n">storeIntoDB</span><span class="p">(</span><span class="n">puzzle</span><span class="o">,</span> <span class="n">medianResult</span><span class="p">)</span>
+</pre></div>
                 
                   
                 
